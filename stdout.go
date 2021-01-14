@@ -16,7 +16,7 @@ const (
 
 func Logo() {
 
-	myFigure := figure.NewColorFigure("DionTech", "", "green", true)
+	myFigure := figure.NewColorFigure("DionTech", "doom", "green", true)
 	myFigure.Print()
 
 }
