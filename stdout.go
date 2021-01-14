@@ -1,6 +1,10 @@
 package stdoutformat
 
-import "fmt"
+import (
+	"fmt"
+
+	"github.com/common-nighthawk/go-figure"
+)
 
 const (
 	InfoColor    = "\033[1;34m%s\033[0m"
@@ -9,6 +13,13 @@ const (
 	ErrorColor   = "\033[1;31m%s\033[0m"
 	DebugColor   = "\033[0;36m%s\033[0m"
 )
+
+func Logo() {
+
+	myFigure := figure.NewColorFigure("DionTech", "", "green", true)
+	myFigure.Print()
+
+}
 
 func Error(err error) {
 	fmt.Printf(ErrorColor+"\n", err)
